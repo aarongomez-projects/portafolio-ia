@@ -469,12 +469,8 @@ code {
 .status-sale { color: #f472b6; background: rgba(244, 114, 182, 0.1); }
 .status-dev { color: #60a5fa; background: rgba(96, 165, 250, 0.1); }
 .status-build { color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
-
-.pending {
-  color: #fbbf24;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
+.status-proto { color: #c084fc; background: rgba(192, 132, 252, 0.1); }
+.status-proposal { color: #cbd5e1; background: rgba(203, 213, 225, 0.08); }
 
 .project-link a {
   color: #a5b4fc;
@@ -526,8 +522,61 @@ code {
   margin-top: 0;
 }
 
-.project-wide {
-  grid-row: span 2;
+.project-full {
+  grid-column: 1 / -1;
+}
+
+.featured {
+  border-color: rgba(129, 140, 248, 0.45);
+}
+
+.gallery,
+.modules {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+.shot {
+  margin: 0.8rem 0 0;
+}
+
+.gallery .shot,
+.modules .shot {
+  margin: 0;
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: #0b1020;
+}
+
+.shot a:hover img {
+  border-color: rgba(129, 140, 248, 0.7);
+}
+
+.shot figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.module figcaption {
+  font-size: 0.86rem;
+}
+
+.module figcaption strong {
+  color: var(--text);
+}
+
+.module figcaption .note {
+  color: #fbbf24;
+  font-weight: 600;
 }
 
 .demo-video {
@@ -630,8 +679,9 @@ code {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .project-wide {
-    grid-row: auto;
+  .gallery,
+  .modules {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .main-nav {
