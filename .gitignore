@@ -1,0 +1,6 @@
+.env
+.env.*
+node_modules/
+*KEY*.txt
+*Key*.txt
+*key*.txt
