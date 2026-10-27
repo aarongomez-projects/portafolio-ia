@@ -320,6 +320,33 @@
             <p>Según UNE-EN 60300-3-3 / ISO 15663: análisis de sensibilidad, reportes PDF y Excel, datos locales y RAG sobre la normativa.</p>
             <p class="project-link"><a href="https://accv.obremosa.com/login">accv.obremosa.com</a></p>
           </article>
+
+          <article class="card project-card">
+            <span class="status status-dev">En desarrollo</span>
+            <h3>SINAPSIS — biblioteca de conocimiento con RAG</h3>
+            <p>
+              Sistema propio para convertir una biblioteca técnica dispersa (normas, manuales, cursos, experiencia de
+              campo) en conocimiento procesado y consultable por aplicaciones.
+            </p>
+            <p>
+              <strong>Cómo está construido:</strong> una capa de procesamiento (Modelo Interactivo: Capturar → Procesar
+              → Aplicar → Compartir) guía la conversión de cada fuente en una ficha propia con proyecto, ruta, nivel
+              pedagógico, mini app candidata y descripción de cobertura; una API en Cloudflare (sinapsis-api) vectoriza
+              ese conocimiento y lo sirve por un endpoint <code>/consulta</code> con llave por aplicación, metadatos de
+              dominio y audiencia, y tres niveles de acceso (vendible / consultable / privado) para que los productos
+              comerciales solo usen contenido propio o de licencia abierta y las fuentes con copyright se citen por
+              apartado, nunca se reproduzcan.
+            </p>
+            <p>
+              <strong>Para qué sirve:</strong> es la materia prima de ACCV, de los agentes conversacionales y de las
+              mini apps y cursos de OBREMOSA y Socio Exponencial. Un mismo tema procesado una vez rinde varios formatos:
+              calculadora, agente, curso, material de capacitación.
+            </p>
+            <figure class="shot">
+              <a href="assets/sinapsis-modelo.png" target="_blank" rel="noopener"><img src="assets/sinapsis-modelo.png" alt="Modelo Interactivo de SINAPSIS mostrando una fuente procesada en ficha" width="1400" height="761" loading="lazy" /></a>
+              <figcaption>Modelo Interactivo v1.1: una fuente procesada en ficha con proyecto, ruta, nivel de candado, mini app candidata y descripción de cobertura. Prototipo en desarrollo; la ingesta vectorial es la siguiente etapa.</figcaption>
+            </figure>
+          </article>
         </div>
       </div>
     </section>
